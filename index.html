@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <!-- : "ricardo.braga@canvi.com.br",
+
+    "senha": "C4nv1$2o2A"               -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Envio de E-mail</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="login.js"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <!-- Container -->
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96 space-y-8">
+        <!-- Formulário de Login -->
+        <div id="login-form" class="space-y-4">
+            <h2 class="text-3xl font-semibold text-center text-blue-600">Login</h2>
+            <div class="relative">
+                <input type="email" id="email" placeholder="E-mail" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300" required>
+            </div>
+            <div class="relative">
+                <input type="password" id="password" placeholder="Senha" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300" required>
+            </div>
+            <button id="login-btn" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-all duration-300">Entrar</button>
+            <p id="login-error" class="text-red-500 text-sm text-center hidden">E-mail ou senha incorretos</p>
+        </div>
+
+        <!-- Formulário de Envio de E-mail -->
+        <div id="email-form" class="space-y-4 hidden mt-8">
+            <h2 class="text-3xl font-semibold text-center text-green-600">Enviar E-mail</h2>
+            <div class="relative">
+                <input type="email" id="to" placeholder="Para" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300">
+            </div>
+            <div class="relative">
+                <input type="text" id="subject" placeholder="Assunto" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300">
+            </div>
+            <div class="relative">
+                <textarea id="text" placeholder="Texto do e-mail" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300" rows="4"></textarea>
+            </div>
+            <div class="relative">
+                <input type="file" id="attachment" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300">
+            </div>
+            <button id="send-email-btn" class="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition-all duration-300">Enviar E-mail</button>
+            <p id="email-success" class="text-green-500 text-sm text-center hidden">E-mail enviado com sucesso!</p>
+            <p id="email-error" class="text-red-500 text-sm text-center hidden">Erro ao enviar e-mail. Tente novamente.</p>
+        </div>
+    </div>
+</body>
+
+</html>
